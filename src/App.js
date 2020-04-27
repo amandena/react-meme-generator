@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
+import MemeContainer from './containers/MemeContainer'
 
 function App() {
   return (
     <div className="App">
-      App
+      <MemeContainer/>
     </div>
   )
 }
