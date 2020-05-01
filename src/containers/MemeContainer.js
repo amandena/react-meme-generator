@@ -6,7 +6,7 @@ import UploadForm from '../components/UploadForm'
 class MemeContainer extends React.Component {
   render() {
     return(
-      <div>
+      <div className='meme-container'>
         MemeContainer
         <MemeCard/>
         <UploadForm/>
