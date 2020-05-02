@@ -1,7 +1,14 @@
 import React from 'react'
 
 class SettingsContainer extends React.Component {
-  
+  constructor() {
+    super()
+    this.state = {
+      size: '3:4',
+      color: 'black',
+      font: 'bold'
+    }
+  }
   
   render() {
     return(
