@@ -3,11 +3,12 @@
 }
 
 body {
-  background-color: rgb(182, 179, 179);
+  background-color: rgb(101, 139, 139);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .meme-container {
