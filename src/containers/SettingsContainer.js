@@ -1,15 +1,6 @@
 import React from 'react'
 
 class SettingsContainer extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      size: '3:4',
-      color: 'black',
-      font: 'bold'
-    }
-  }
-
   handleSizeChange = event => {
     event.preventDefault()
     this.setState({
@@ -18,15 +9,17 @@ class SettingsContainer extends React.Component {
   }
   
   render() {
+    const { size } = this.props
+
     return(
       <div className='settings'>
         <div className='sizes'>
           <label>OUTPUT SIZE</label><br/>
-            <button className='one-by-one' name='1:1' value={console.log(this.state.value)} onClick={this.handleSizeChange}>1:1</button>
-            <button className='three-by-four' name='3:4' value={this.state.value} onClick={this.handleSizeChange}>3:4</button>
-            <button className='four-by-three' name='4:3' value={this.state.value} onClick={this.handleSizeChange}>4:3</button>
-            <button className='three-by-five' name='3:5' value={this.state.value} onClick={this.handleSizeChange}>3:5</button>
-            <button className='five-by-three' name='5:3' value={this.state.value} onClick={this.handleSizeChange}>5:3</button>
+            <button className='one-by-one' name='1:1' value={console.log(size)} onClick={this.handleSizeChange}>1:1</button>
+            <button className='three-by-four' name='3:4' value={size} onClick={this.handleSizeChange}>3:4</button>
+            <button className='four-by-three' name='4:3' value={size} onClick={this.handleSizeChange}>4:3</button>
+            <button className='three-by-five' name='3:5' value={size} onClick={this.handleSizeChange}>3:5</button>
+            <button className='five-by-three' name='5:3' value={size} onClick={this.handleSizeChange}>5:3</button>
         </div>
 
         <br/><br/>
