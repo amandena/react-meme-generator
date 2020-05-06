@@ -15,7 +15,7 @@ class SettingsContainer extends React.Component {
       <div className='settings'>
         <div className='sizes'>
           <label>OUTPUT SIZE</label><br/>
-            <button className='one-by-one' name='1:1' value={console.log(size)} onClick={this.handleSizeChange}>1:1</button>
+            <button className='one-by-one' name='1:1' value={size} onClick={this.handleSizeChange}>1:1</button>
             <button className='three-by-four' name='3:4' value={size} onClick={this.handleSizeChange}>3:4</button>
             <button className='four-by-three' name='4:3' value={size} onClick={this.handleSizeChange}>4:3</button>
             <button className='three-by-five' name='3:5' value={size} onClick={this.handleSizeChange}>3:5</button>
