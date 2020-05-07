@@ -2,7 +2,7 @@ import React from 'react'
 
 const UploadForm = () => {
   return(
-    <div>
+    <div className='upload'>
       UploadForm
     </div>
   )
