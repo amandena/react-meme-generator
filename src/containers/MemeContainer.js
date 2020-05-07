@@ -12,14 +12,20 @@ class MemeContainer extends React.Component {
       font: 'bold'
     }
   }
+
+  handleSizeChange = event => {
+    event.preventDefault()
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
   
   render() {
     return(
       <div className='meme-container'>
-        <h1>Make a Meme</h1>
         <MemeCard/>
         <UploadForm/>
-        <SettingsContainer size={this.state.size} color={this.state.color} font={this.state.font}/>
+        <SettingsContainer handleSizeChange={this.handleSizeChange} size={this.state.size} color={this.state.color} font={this.state.font}/>
       </div>
     )
   }
