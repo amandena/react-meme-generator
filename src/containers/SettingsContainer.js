@@ -1,12 +1,6 @@
 import React from 'react'
 
 class SettingsContainer extends React.Component {
-  handleSizeChange = event => {
-    event.preventDefault()
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
   
   render() {
     const { size } = this.props
