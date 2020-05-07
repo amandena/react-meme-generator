@@ -7,17 +7,19 @@ class MemeContainer extends React.Component {
   constructor() {
     super()
     this.state = {
-      size: '3:4',
-      color: 'black',
-      font: 'bold'
+      meme: {
+        size: '3:4',
+        color: 'black',
+        font: 'bold'
+      }
     }
   }
 
   handleSizeChange = event => {
-    event.preventDefault()
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+    // event.preventDefault()
+    // this.setState({
+    //   [event.target.name]: event.target.value
+    // })
   }
   
   render() {
@@ -25,7 +27,7 @@ class MemeContainer extends React.Component {
       <div className='meme-container'>
         <MemeCard/>
         <UploadForm/>
-        <SettingsContainer handleSizeChange={this.handleSizeChange} size={this.state.size} color={this.state.color} font={this.state.font}/>
+        <SettingsContainer handleSizeChange={this.handleSizeChange} size={this.state.meme.size} color={this.state.meme.color} font={this.state.meme.font}/>
       </div>
     )
   }
