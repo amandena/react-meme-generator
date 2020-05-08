@@ -16,10 +16,13 @@ class MemeContainer extends React.Component {
   }
 
   handleSizeChange = event => {
-    // event.preventDefault()
-    // this.setState({
-    //   [event.target.name]: event.target.value
-    // })
+    event.preventDefault()
+    this.setState({
+      meme: {
+        ...this.state.meme,
+        size: event.target.value
+      }
+    })
   }
   
   render() {
