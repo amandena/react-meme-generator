@@ -10,17 +10,36 @@ class UploadForm extends React.Component {
     }
   }
 
+  handleChange = event => {
+    event.preventDefault()
+    this.setState({
+      uploadForm: {
+        ...this.state.uploadForm,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
+
   render() {
     return(
       <div className='upload'>
         <form>
           <h3>Upload an Image:</h3>
 
-          <input type='text' placeholder='image_url'></input>
+          <input 
+            type='text' 
+            placeholder='image_url' 
+            name='image_url' 
+            value={this.state.uploadForm.image_url} 
+            onChange={this.handleChange}
+          />
 
           <br/><br/>
 
-          <input type='submit' value='Upload'/>
+          <input 
+            type='submit' 
+            value='Upload'
+          />
         </form>
       </div>
     )
