@@ -10,7 +10,8 @@ class MemeContainer extends React.Component {
       meme: {
         size: '3:4',
         color: 'black',
-        font: 'bold'
+        font: 'bold',
+        image: ''
       }
     }
   }
