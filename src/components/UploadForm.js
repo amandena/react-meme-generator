@@ -11,7 +11,6 @@ class UploadForm extends React.Component {
   }
 
   handleChange = event => {
-    event.preventDefault()
     this.setState({
       uploadForm: {
         ...this.state.uploadForm,
@@ -23,7 +22,7 @@ class UploadForm extends React.Component {
   render() {
     return(
       <div className='upload'>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <h3>Upload an Image:</h3>
 
           <input 
