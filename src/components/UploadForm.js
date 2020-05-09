@@ -19,10 +19,22 @@ class UploadForm extends React.Component {
     })
   }
 
+  resetState = () => {
+    this.setState({
+      uploadForm: {
+        image_url: ''
+      }
+    })
+  }
+
   render() {
     return(
       <div className='upload'>
-        <form onSubmit={this.props.handleUpload}>
+        <form onSubmit={(event) => {
+          this.props.handleUpload(event, this.state.uploadForm)
+          this.resetState()
+        }}
+        >
           <h3>Upload an Image:</h3>
 
           <input 
