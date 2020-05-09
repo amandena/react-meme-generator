@@ -22,7 +22,7 @@ class UploadForm extends React.Component {
   render() {
     return(
       <div className='upload'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.handleUpload}>
           <h3>Upload an Image:</h3>
 
           <input 

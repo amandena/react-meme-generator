@@ -25,12 +25,17 @@ class MemeContainer extends React.Component {
       }
     })
   }
+
+  handleUpload = event => {
+    event.preventDefault()
+    console.log('submit!')
+  }
   
   render() {
     return(
       <div className='meme-container'>
         <MemeCard/>
-        <UploadForm/>
+        <UploadForm handleUpload={this.handleUpload}/>
         <SettingsContainer handleSizeChange={this.handleSizeChange} size={this.state.meme.size} color={this.state.meme.color} font={this.state.meme.font}/>
       </div>
     )
