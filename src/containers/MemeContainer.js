@@ -26,9 +26,14 @@ class MemeContainer extends React.Component {
     })
   }
 
-  handleUpload = event => {
+  handleUpload = (event, uploadForm) => {
     event.preventDefault()
-    console.log('submit!')
+    this.setState({
+      meme: {
+        ...this.state.meme,
+        image: uploadForm.image_url
+      }
+    })
   }
   
   render() {
