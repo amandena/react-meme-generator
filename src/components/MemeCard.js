@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MemeCard = () => {
+const MemeCard = ({ meme }) => {
   return(
     <div contentEditable='true' className="meme-div">
       <svg version="1.1"
@@ -13,6 +13,8 @@ const MemeCard = () => {
         <text className="top-text" x="250" y="43" fontSize="55" textAnchor="middle" fill="white">YOUR TEXT HERE</text>
 
         <rect className="img-box" width="100%" height="75%" x="0" y="50" fill="white" stroke="black" strokeWidth="2" />
+
+        <image contentEditable="true" href={meme.image} width="100%" height="75%" x="0" y="50" />
 
         <text className="bottom-text" x="250" y="393" fontSize="55" textAnchor="middle" fill="white">YOUR TEXT HERE</text>
 
