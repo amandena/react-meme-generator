@@ -16,3 +16,22 @@ body {
   flex-direction: row;
 }
 
+.black {
+  fill: black;
+}
+
+.blue {
+  fill: blue;
+}
+
+.green {
+  fill: green;
+}
+
+.yellow {
+  fill: yellow;
+}
+
+.white {
+  fill: white;
+}
