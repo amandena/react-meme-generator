@@ -39,9 +39,18 @@ class MemeContainer extends React.Component {
   render() {
     return(
       <div className='meme-container'>
-        <MemeCard meme={this.state.meme}/>
-        <UploadForm handleUpload={this.handleUpload}/>
-        <SettingsContainer handleSizeChange={this.handleSizeChange} size={this.state.meme.size} color={this.state.meme.color} font={this.state.meme.font}/>
+        <MemeCard 
+          meme={this.state.meme}
+        />
+        <UploadForm 
+          handleUpload={this.handleUpload}
+        />
+        <SettingsContainer 
+          handleSizeChange={this.handleSizeChange} 
+          size={this.state.meme.size} 
+          color={this.state.meme.color} 
+          font={this.state.meme.font}
+        />
       </div>
     )
   }
