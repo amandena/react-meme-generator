@@ -1,9 +1,30 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleSizeChange }) => {
+const SettingsContainer = ({ handleSizeChange, topText, bottomText }) => {
 
   return(
     <div className='settings'>
+      <div className='texts'>
+         <input 
+          type='text' 
+          placeholder='Text on top' 
+          name='topText' 
+          value={topText}
+        />
+
+        <br/><br/>
+
+        <input 
+          type='text' 
+          placeholder='Text on bottom' 
+          name='bottomText' 
+          value={bottomText}
+        />
+
+        <br/><br/>
+        
+      </div>
+      
       <div className='sizes'>
         <label>OUTPUT SIZE</label><br/>
           <button className='one-by-one' value='1:1' onClick={handleSizeChange}>1:1</button>
