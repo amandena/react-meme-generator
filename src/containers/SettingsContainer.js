@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleSizeChange, topText, bottomText }) => {
+const SettingsContainer = ({ handleSizeChange, handleTextChange, topText, bottomText }) => {
 
   return(
     <div className='settings'>
@@ -10,6 +10,7 @@ const SettingsContainer = ({ handleSizeChange, topText, bottomText }) => {
           placeholder='Text on top' 
           name='topText' 
           value={topText}
+          onChange={handleTextChange}
         />
 
         <br/><br/>
@@ -19,10 +20,11 @@ const SettingsContainer = ({ handleSizeChange, topText, bottomText }) => {
           placeholder='Text on bottom' 
           name='bottomText' 
           value={bottomText}
+          onChange={handleTextChange}
         />
 
         <br/><br/>
-        
+
       </div>
       
       <div className='sizes'>
