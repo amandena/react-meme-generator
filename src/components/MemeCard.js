@@ -5,18 +5,16 @@ const MemeCard = ({ meme }) => {
     <div className="meme-div">
       <svg version="1.1"
           baseProfile="full"
-          width="500" height="400"
+          width="500" height="100%"
           xmlns="http://www.w3.org/2000/svg">
 
-        <rect className="background-box" width="100%" height="100%" fill="black" />
+        <rect className="background-box" width="100%" height="100%" fill="black" href={meme.image} />
 
-        <text className="top-text" x="250" y="43" fontSize="55" textAnchor="middle" fill="white">{meme.topText}</text>
+        <image href={meme.image} width="100%" height="100%" />
 
-        <rect className="img-box" width="100%" height="75%" x="0" y="50" fill="white" stroke="black" strokeWidth="2" />
+        <text className="top-text" x="250" y="50" fontSize="55" textAnchor="middle" fill="white">{meme.topText}</text>
 
-        <image contentEditable="true" href={meme.image} width="100%" height="75%" x="0" y="50" />
-
-        <text className="bottom-text" x="250" y="393" fontSize="55" textAnchor="middle" fill="white">{meme.bottomText}</text>
+        <text className="bottom-text" x="250" y="370" fontSize="55" textAnchor="middle" fill="white">{meme.bottomText}</text>
 
       </svg>
     </div>
