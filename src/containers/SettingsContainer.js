@@ -5,6 +5,8 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, topText, bottom
   return(
     <div className='settings'>
       <div className='texts'>
+         <h3>Add Text to Meme:</h3>
+
          <input 
           type='text' 
           placeholder='Text on top' 
@@ -60,7 +62,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, topText, bottom
 
       <br/><br/>
 
-      <button className='save'>Save Changes</button>
+      <button className='download'>Download Meme</button>
     </div>
   )
 }
