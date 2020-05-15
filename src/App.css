@@ -11,9 +11,26 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+button, input[type=submit] {
+  background-color: lightgrey;
+  border-color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+input[type=text] {
+  width: 180px;
+  height: 20px;
+  border: none;
+}
+
 .meme-container {
   display: flex;
   flex-direction: row;
+}
+
+.meme-div {
+  padding-right: 20px;
 }
 
 .black {
