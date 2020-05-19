@@ -5,7 +5,7 @@ const MemeCard = ({ meme }) => {
     <div className="meme-div">
       <svg version="1.1"
           baseProfile="full"
-          width="500" height="100%"
+          width="500" height="500"
           xmlns="http://www.w3.org/2000/svg">
 
         <rect className="background-box" width="100%" height="100%" fill={meme.color} href={meme.image} />
