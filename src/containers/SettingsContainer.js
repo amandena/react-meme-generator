@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChange, topText, bottomText }) => {
+const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChange, handleTextColorChange, topText, bottomText }) => {
 
   return(
     <div className='settings'>
@@ -84,11 +84,31 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
 
       <div className='text-color'>
         <label>TEXT COLOR</label><br/>
-          <button className='black'>BLACK</button>
-          <button className='blue'>BLUE</button>
-          <button className='green'>GREEN</button>
-          <button className='yellow'>YELLOW</button>
-          <button className='white'>WHITE</button>
+          <button 
+            className='black'
+            value='black'
+            onClick={handleTextColorChange}
+          >BLACK</button>
+          <button 
+            className='blue'
+            value='blue'
+            onClick={handleTextColorChange}
+          >BLUE</button>
+          <button 
+            className='green'
+            value='green'
+            onClick={handleTextColorChange}
+          >GREEN</button>
+          <button 
+            className='yellow'
+            value='yellow'
+            onClick={handleTextColorChange}
+          >YELLOW</button>
+          <button 
+            className='white'
+            value='white'
+            onClick={handleTextColorChange}
+          >WHITE</button>
       </div>
 
       <br/><br/>
