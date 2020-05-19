@@ -11,6 +11,7 @@ class MemeContainer extends React.Component {
         size: '3:4',
         color: 'black',
         font: 'bold',
+        textColor: 'black',
         topText: '',
         bottomText: '',
         image: ''
@@ -47,6 +48,15 @@ class MemeContainer extends React.Component {
     })
   }
 
+  handleTextColorChange = event => {
+    this.setState({
+      meme: {
+        ...this.state.meme,
+        textColor: event.target.value
+      }
+    })
+  }
+
   handleColorChange = event => {
     this.setState({
       meme: {
@@ -68,6 +78,7 @@ class MemeContainer extends React.Component {
         <SettingsContainer 
           handleColorChange={this.handleColorChange}
           handleTextChange={this.handleTextChange}
+          handleTextColorChange={this.handleTextColorChange}
           handleSizeChange={this.handleSizeChange} 
           size={this.state.meme.size} 
           color={this.state.meme.color} 
