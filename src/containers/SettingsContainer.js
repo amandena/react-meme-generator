@@ -38,7 +38,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           <button className='five-by-three' value='5:3' onClick={handleSizeChange}>5:3</button>
       </div>
 
-      <br/><br/>
+      <br/>
 
       <div className='colors'>
         <label>BACKGROUND COLOR</label><br/>
@@ -69,7 +69,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           >WHITE</button>
       </div>
 
-      <br/><br/>
+      <br/>
 
       <div className='fonts'>
         <label>FONT</label><br/>
@@ -80,7 +80,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           <button className='whimsy'>WHIMSY</button>
       </div>
 
-      <br/><br/>
+      <br/>
 
       <div className='text-color'>
         <label>TEXT COLOR</label><br/>
@@ -111,7 +111,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           >WHITE</button>
       </div>
 
-      <br/><br/>
+      <br/>
 
       <button className='download'>Download Meme</button>
     </div>
