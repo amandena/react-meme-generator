@@ -11,7 +11,7 @@ class MemeContainer extends React.Component {
         size: '3:4',
         color: 'black',
         font: 'bold',
-        textColor: 'black',
+        textColor: 'white',
         topText: '',
         bottomText: '',
         image: ''
