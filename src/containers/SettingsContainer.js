@@ -82,6 +82,17 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
 
       <br/><br/>
 
+      <div className='text-color'>
+        <label>TEXT COLOR</label><br/>
+          <button className='black'>BLACK</button>
+          <button className='blue'>BLUE</button>
+          <button className='green'>GREEN</button>
+          <button className='yellow'>YELLOW</button>
+          <button className='white'>WHITE</button>
+      </div>
+
+      <br/><br/>
+
       <button className='download'>Download Meme</button>
     </div>
   )
