@@ -12,9 +12,9 @@ const MemeCard = ({ meme }) => {
 
         <image href={meme.image} width="100%" height="100%" />
 
-        <text className="top-text" x="250" y="45" fontSize="40" textAnchor="middle" fill="white">{meme.topText}</text>
+        <text className="top-text" x="250" y="45" fontSize="40" textAnchor="middle" fill={meme.textColor}>{meme.topText}</text>
 
-        <text className="bottom-text" x="250" y="440" fontSize="40" textAnchor="middle" fill="white">{meme.bottomText}</text>
+        <text className="bottom-text" x="250" y="440" fontSize="40" textAnchor="middle" fill={meme.textColor}>{meme.bottomText}</text>
 
       </svg>
     </div>
