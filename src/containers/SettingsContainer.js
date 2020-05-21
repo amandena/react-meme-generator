@@ -5,7 +5,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
   return(
     <div className='settings'>
       <div className='texts'>
-         <h3>Add Text to Meme:</h3>
+         <h4>ADD TEXT TO MEME:</h4>
 
          <input 
           type='text' 

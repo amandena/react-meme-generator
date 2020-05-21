@@ -34,7 +34,7 @@ class UploadForm extends React.Component {
           this.props.handleUpload(event, this.state.uploadForm)
           this.resetState()
         }}>
-          <h3>Upload an Image:</h3>
+          <h4>UPLOAD AN IMAGE:</h4>
 
           <input 
             type='text' 
