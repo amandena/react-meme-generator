@@ -73,7 +73,10 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
 
       <div className='fonts'>
         <label>FONT</label><br/>
-          <button className='bold'>BOLD</button>
+          <button 
+            className='bold'
+            value={{fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"}}
+          >BOLD</button>
           <button className='cursive'>CURSIVE</button>
           <button className='serif'>SERIF</button>
           <button className='sans-serif'>SANS-SERIF</button>
