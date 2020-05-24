@@ -44,26 +44,31 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
         <label>BACKGROUND COLOR</label><br/>
           <button 
             className='black' 
+            name='color'
             value='black' 
             onClick={handleColorChange}
           >BLACK</button>
           <button 
             className='blue' 
+            name='color'
             value='blue' 
             onClick={handleColorChange}
           >BLUE</button>
           <button 
             className='green' 
+            name='color'
             value='green' 
             onClick={handleColorChange}
           >GREEN</button>
           <button 
             className='yellow' 
+            name='color'
             value='yellow'
             onClick={handleColorChange}
           >YELLOW</button>
           <button 
             className='white' 
+            name='color'
             value='white' 
             onClick={handleColorChange}
           >WHITE</button>
@@ -75,12 +80,30 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
         <label>FONT</label><br/>
           <button 
             className='bold'
-            value={{fontFamily: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"}}
+            name='font'
+            value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            onClick=''
           >BOLD</button>
-          <button className='cursive'>CURSIVE</button>
-          <button className='serif'>SERIF</button>
-          <button className='sans-serif'>SANS-SERIF</button>
-          <button className='whimsy'>WHIMSY</button>
+          <button 
+            className='cursive'
+            name='font'
+            value=''
+          >CURSIVE</button>
+          <button 
+            className='serif'
+            name='font'
+            value=''
+          >SERIF</button>
+          <button 
+            className='sans-serif'
+            name='font'
+            value=''
+          >SANS-SERIF</button>
+          <button 
+            className='whimsy'
+            name='font'
+            vaue=''
+          >WHIMSY</button>
       </div>
 
       <br/>
@@ -89,26 +112,31 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
         <label>TEXT COLOR</label><br/>
           <button 
             className='black'
+            name='textColor'
             value='black'
             onClick={handleTextColorChange}
           >BLACK</button>
           <button 
             className='blue'
+            name='textColor'
             value='blue'
             onClick={handleTextColorChange}
           >BLUE</button>
           <button 
             className='green'
+            name='textColor'
             value='green'
             onClick={handleTextColorChange}
           >GREEN</button>
           <button 
             className='yellow'
+            name='textColor'
             value='yellow'
             onClick={handleTextColorChange}
           >YELLOW</button>
           <button 
             className='white'
+            name='textColor'
             value='white'
             onClick={handleTextColorChange}
           >WHITE</button>
