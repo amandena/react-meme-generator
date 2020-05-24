@@ -48,9 +48,6 @@ class MemeContainer extends React.Component {
         />
         <SettingsContainer 
           handleChange={this.handleChange}
-          handleSizeChange={this.handleSizeChange}   
-          color={this.state.meme.color} 
-          font={this.state.meme.font}
           topText={this.state.meme.topText}
           bottomText={this.state.meme.bottomText}
         />
