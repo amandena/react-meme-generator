@@ -10,7 +10,7 @@ class MemeContainer extends React.Component {
       meme: {
         size: '3:4',
         color: 'black',
-        font: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+        font: 'Impact',
         textColor: 'white',
         topText: '',
         bottomText: '',
@@ -65,6 +65,15 @@ class MemeContainer extends React.Component {
       }
     })
   }
+
+  handleFontChange = event => {
+    this.setState({
+      meme: {
+      ...this.state.meme,
+      font: event.target.value
+      }
+    })
+  }
   
   render() {
     return(
@@ -80,6 +89,7 @@ class MemeContainer extends React.Component {
           handleTextChange={this.handleTextChange}
           handleTextColorChange={this.handleTextColorChange}
           handleSizeChange={this.handleSizeChange} 
+          handleFontChange={this.handleFontChange}
           size={this.state.meme.size} 
           color={this.state.meme.color} 
           font={this.state.meme.font}
