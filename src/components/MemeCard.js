@@ -27,12 +27,12 @@ const MemeCard = ({ meme }) => {
           x="250" 
           y="45" 
           fontSize="40" 
-          fontFamily={meme.font} 
+          fontFamily={meme.font}
           textAnchor="middle" 
           fill={meme.textColor}
-          >
-            {meme.topText}
-          </text>
+        >
+          {meme.topText}
+        </text>
 
         <text 
           className="bottom-text" 
@@ -42,8 +42,8 @@ const MemeCard = ({ meme }) => {
           fontFamily={meme.font}
           textAnchor="middle" 
           fill={meme.textColor}
-        >{
-          meme.bottomText}
+        >
+          {meme.bottomText}
         </text>
       </svg>
     </div>
