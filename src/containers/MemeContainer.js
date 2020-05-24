@@ -39,38 +39,11 @@ class MemeContainer extends React.Component {
     })
   }
 
-  handleTextChange = event => {
+  handleChange = event => {
     this.setState({
       meme: {
         ...this.state.meme,
         [event.target.name]: event.target.value
-      }
-    })
-  }
-
-  handleTextColorChange = event => {
-    this.setState({
-      meme: {
-        ...this.state.meme,
-        textColor: event.target.value
-      }
-    })
-  }
-
-  handleColorChange = event => {
-    this.setState({
-      meme: {
-        ...this.state.meme,
-        color: event.target.value
-      }
-    })
-  }
-
-  handleFontChange = event => {
-    this.setState({
-      meme: {
-      ...this.state.meme,
-      font: event.target.value
       }
     })
   }
@@ -85,11 +58,8 @@ class MemeContainer extends React.Component {
           handleUpload={this.handleUpload}
         />
         <SettingsContainer 
-          handleColorChange={this.handleColorChange}
-          handleTextChange={this.handleTextChange}
-          handleTextColorChange={this.handleTextColorChange}
+          handleChange={this.handleChange}
           handleSizeChange={this.handleSizeChange} 
-          handleFontChange={this.handleFontChange}
           size={this.state.meme.size} 
           color={this.state.meme.color} 
           font={this.state.meme.font}

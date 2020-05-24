@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChange, handleTextColorChange, handleFontChange, topText, bottomText }) => {
+const SettingsContainer = ({ handleSizeChange, handleChange, topText, bottomText }) => {
 
   return(
     <div className='settings'>
@@ -12,7 +12,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           placeholder='Text on top' 
           name='topText' 
           value={topText}
-          onChange={handleTextChange}
+          onChange={handleChange}
         />
 
         <br/><br/>
@@ -22,7 +22,7 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
           placeholder='Text on bottom' 
           name='bottomText' 
           value={bottomText}
-          onChange={handleTextChange}
+          onChange={handleChange}
         />
 
         <br/><br/>
@@ -71,31 +71,31 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
             className='black' 
             name='color'
             value='black' 
-            onClick={handleColorChange}
+            onClick={handleChange}
           >BLACK</button>
           <button 
             className='blue' 
             name='color'
             value='blue' 
-            onClick={handleColorChange}
+            onClick={handleChange}
           >BLUE</button>
           <button 
             className='green' 
             name='color'
             value='green' 
-            onClick={handleColorChange}
+            onClick={handleChange}
           >GREEN</button>
           <button 
             className='yellow' 
             name='color'
             value='yellow'
-            onClick={handleColorChange}
+            onClick={handleChange}
           >YELLOW</button>
           <button 
             className='white' 
             name='color'
             value='white' 
-            onClick={handleColorChange}
+            onClick={handleChange}
           >WHITE</button>
       </div>
 
@@ -107,25 +107,25 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
             className='bold'
             name='font'
             value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
-            onClick={handleFontChange}
+            onClick={handleChange}
           >BOLD</button>
           <button 
             className='cursive'
             name='font'
             value='cursive'
-            onClick={handleFontChange}
+            onClick={handleChange}
           >CURSIVE</button>
           <button 
             className='serif'
             name='font'
             value="Georgia, 'Times New Roman', Times, serif"
-            onClick={handleFontChange}
+            onClick={handleChange}
           >SERIF</button>
           <button 
             className='sans-serif'
             name='font'
             value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
-            onClick={handleFontChange}
+            onClick={handleChange}
           >SANS-SERIF</button>
       </div>
 
@@ -137,31 +137,31 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
             className='black'
             name='textColor'
             value='black'
-            onClick={handleTextColorChange}
+            onClick={handleChange}
           >BLACK</button>
           <button 
             className='blue'
             name='textColor'
             value='blue'
-            onClick={handleTextColorChange}
+            onClick={handleChange}
           >BLUE</button>
           <button 
             className='green'
             name='textColor'
             value='green'
-            onClick={handleTextColorChange}
+            onClick={handleChange}
           >GREEN</button>
           <button 
             className='yellow'
             name='textColor'
             value='yellow'
-            onClick={handleTextColorChange}
+            onClick={handleChange}
           >YELLOW</button>
           <button 
             className='white'
             name='textColor'
             value='white'
-            onClick={handleTextColorChange}
+            onClick={handleChange}
           >WHITE</button>
       </div>
 
