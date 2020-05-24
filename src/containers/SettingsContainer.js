@@ -31,11 +31,36 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
       
       <div className='sizes'>
         <label>OUTPUT SIZE</label><br/>
-          <button className='one-by-one' value='1:1' onClick={handleSizeChange}>1:1</button>
-          <button className='three-by-four' value='3:4' onClick={handleSizeChange}>3:4</button>
-          <button className='four-by-three' value='4:3' onClick={handleSizeChange}>4:3</button>
-          <button className='three-by-five' value='3:5' onClick={handleSizeChange}>3:5</button>
-          <button className='five-by-three' value='5:3' onClick={handleSizeChange}>5:3</button>
+          <button 
+            className='one-by-one'
+            name='size' 
+            value='1:1' 
+            onClick={handleSizeChange}
+          >1:1</button>
+          <button 
+            className='three-by-four' 
+            name='size'
+            value='3:4' 
+            onClick={handleSizeChange}
+          >3:4</button>
+          <button 
+            className='four-by-three'
+            name='size' 
+            value='4:3' 
+            onClick={handleSizeChange}
+          >4:3</button>
+          <button 
+            className='three-by-five'
+            name='size' 
+            value='3:5' 
+            onClick={handleSizeChange}
+          >3:5</button>
+          <button 
+            className='five-by-three'
+            name='size' 
+            value='5:3' 
+            onClick={handleSizeChange}
+          >5:3</button>
       </div>
 
       <br/>
