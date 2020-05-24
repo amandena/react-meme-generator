@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChange, handleTextColorChange, topText, bottomText }) => {
+const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChange, handleTextColorChange, handleFontChange, topText, bottomText }) => {
 
   return(
     <div className='settings'>
@@ -82,28 +82,26 @@ const SettingsContainer = ({ handleSizeChange, handleTextChange, handleColorChan
             className='bold'
             name='font'
             value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
-            onClick=''
+            onClick={handleFontChange}
           >BOLD</button>
           <button 
             className='cursive'
             name='font'
-            value=''
+            value='cursive'
+            onClick={handleFontChange}
           >CURSIVE</button>
           <button 
             className='serif'
             name='font'
-            value=''
+            value="Georgia, 'Times New Roman', Times, serif"
+            onClick={handleFontChange}
           >SERIF</button>
           <button 
             className='sans-serif'
             name='font'
-            value=''
+            value="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+            onClick={handleFontChange}
           >SANS-SERIF</button>
-          <button 
-            className='whimsy'
-            name='font'
-            vaue=''
-          >WHIMSY</button>
       </div>
 
       <br/>
