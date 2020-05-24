@@ -5,7 +5,7 @@ const MemeCard = ({ meme }) => {
     <div className="meme-div">
       <svg version="1.1"
           baseProfile="full"
-          width="500" height="500"
+          width="500" height="auto"
           xmlns="http://www.w3.org/2000/svg">
 
         <rect 
@@ -25,8 +25,8 @@ const MemeCard = ({ meme }) => {
         <text 
           className="top-text" 
           x="250" 
-          y="45" 
-          fontSize="40" 
+          y="30" 
+          fontSize="28" 
           fontFamily={meme.font}
           textAnchor="middle" 
           fill={meme.textColor}
@@ -37,8 +37,8 @@ const MemeCard = ({ meme }) => {
         <text 
           className="bottom-text" 
           x="250" 
-          y="440" 
-          fontSize="40"
+          y="405" 
+          fontSize="28"
           fontFamily={meme.font}
           textAnchor="middle" 
           fill={meme.textColor}
