@@ -3,6 +3,14 @@ import SettingsContainer from './SettingsContainer'
 import MemeCard from '../components/MemeCard'
 import UploadForm from '../components/UploadForm'
 
+const saveSvgAsPng = require('save-svg-as-png')
+
+const imageOptions = {
+  encoderOptions: 1,
+  canvg: window.canvg,
+  scale: -10
+}
+
 class MemeContainer extends React.Component {
   constructor() {
     super()
@@ -16,6 +24,10 @@ class MemeContainer extends React.Component {
         image: ''
       }
     }
+  }
+
+  handleDownload = () => {
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('svg'), 'meme.png', imageOptions)
   }
 
   handleUpload = (event, uploadForm) => {
@@ -48,6 +60,7 @@ class MemeContainer extends React.Component {
         />
         <SettingsContainer 
           handleChange={this.handleChange}
+          handleDownload={this.handleDownload}
           topText={this.state.meme.topText}
           bottomText={this.state.meme.bottomText}
         />
