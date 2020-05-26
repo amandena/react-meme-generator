@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsContainer = ({ handleChange, topText, bottomText }) => {
+const SettingsContainer = ({ handleChange, handleDownload, topText, bottomText }) => {
 
   return(
     <div className='settings'>
@@ -133,7 +133,10 @@ const SettingsContainer = ({ handleChange, topText, bottomText }) => {
 
       <br/>
 
-      <button className='download'>Download Meme</button>
+      <button 
+        className='download'
+        onClick={handleDownload}
+      >Download Meme</button>
     </div>
   )
 }
