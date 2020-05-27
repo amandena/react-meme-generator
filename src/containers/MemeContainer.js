@@ -27,7 +27,8 @@ class MemeContainer extends React.Component {
   }
 
   handleDownload = () => {
-    saveSvgAsPng.saveSvgAsPng(document.getElementById('svg'), 'meme.png', imageOptions)
+    // saveSvgAsPng.saveSvgAsPng(document.getElementById('svg'), 'meme.png', imageOptions)
+    
   }
 
   handleUpload = (event, uploadForm) => {
