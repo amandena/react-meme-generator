@@ -7,7 +7,7 @@ const MemeCard = ({ meme }) => {
         id="svg"
         version="1.1"
         baseProfile="full"
-        width="500" height="auto"
+        width="500" height="420"
         xmlns="http://www.w3.org/2000/svg"
       >
 
