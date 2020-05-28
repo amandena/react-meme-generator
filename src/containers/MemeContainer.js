@@ -3,13 +3,13 @@ import SettingsContainer from './SettingsContainer'
 import MemeCard from '../components/MemeCard'
 import UploadForm from '../components/UploadForm'
 
-const saveSvgAsPng = require('save-svg-as-png')
+// const saveSvgAsPng = require('save-svg-as-png')
 
-const imageOptions = {
-  encoderOptions: 1,
-  canvg: window.canvg,
-  scale: -10
-}
+// const imageOptions = {
+//   encoderOptions: 1,
+//   canvg: window.canvg,
+//   scale: -10
+// }
 
 class MemeContainer extends React.Component {
   constructor() {
