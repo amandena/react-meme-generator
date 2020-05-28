@@ -11,6 +11,31 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.meme-container {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  padding: 20px;
+  box-shadow: 0 0 25px inset coral;
+}
+
+.meme-div {
+  padding-right: 20px;
+}
+
+.upload {
+  background-color: tomato;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.settings {
+  background-color: coral;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 button, input[type=submit] {
   background-color: lightgrey;
   border-color: black;
@@ -21,16 +46,8 @@ button, input[type=submit] {
 input[type=text] {
   width: 180px;
   height: 20px;
-  border: none;
-}
-
-.meme-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.meme-div {
-  padding-right: 20px;
+  border: 1px solid black;
+  background-color: lightgray;
 }
 
 .black {
