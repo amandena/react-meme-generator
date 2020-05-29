@@ -17,7 +17,7 @@ class MemeContainer extends React.Component {
     this.state = {
       meme: {
         color: 'black',
-        font: 'Impact',
+        font: "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
         textColor: 'white',
         topText: '',
         bottomText: '',
