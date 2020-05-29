@@ -16,7 +16,7 @@ body {
   flex-direction: row;
   border: 2px solid black;
   padding: 20px;
-  box-shadow: 0 0 25px inset coral;
+  box-shadow: 0 0 25px inset rgb(35, 95, 97);
 }
 
 .meme-div {
