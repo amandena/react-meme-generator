@@ -3,14 +3,6 @@ import SettingsContainer from './SettingsContainer'
 import MemeCard from '../components/MemeCard'
 import UploadForm from '../components/UploadForm'
 
-// const saveSvgAsPng = require('save-svg-as-png')
-
-// const imageOptions = {
-//   encoderOptions: 1,
-//   canvg: window.canvg,
-//   scale: -10
-// }
-
 class MemeContainer extends React.Component {
   constructor() {
     super()
@@ -27,8 +19,40 @@ class MemeContainer extends React.Component {
   }
 
   handleDownload = () => {
-    // saveSvgAsPng.saveSvgAsPng(document.getElementById('svg'), 'meme.png', imageOptions)
+    const svg = document.getElementById('svg')
+    const canvas = document.createElement('canvas')
+    const { width, height } = svg.getBBox()
     
+    let clonedSvg = svg.cloneNode(true)
+
+    let outerHTML = clonedSvg.outerHTML, 
+      blob = new Blob([outerHTML],{type:'image/svg+xml;charset=utf-8'})
+    let URL = window.URL || window.webkitURL || window
+    let blobURL = URL.createObjectURL(blob)
+    
+    let image = new Image()
+    image.onload = () => {
+      canvas.width = width
+      canvas.height = height
+      let context = canvas.getContext('2d')
+      // draw image in canvas starting left-0 , top - 0  
+      context.drawImage(image, 0, 0, width, height )
+      //  downloadImage(canvas); need to implement
+    }
+    image.src = blobURL
+
+    let png = canvas.toDataURL('image/png')
+
+    const download = function(href, name){
+      let link = document.createElement('a')
+      link.download = name
+      link.style.opacity = "0"
+      // document.append(link)
+      link.href = href
+      link.click()
+      link.remove()
+    }
+    download(png, "meme.png")
   }
 
   handleUpload = (event, uploadForm) => {
