@@ -21,7 +21,7 @@ class MemeContainer extends React.Component {
   handleDownload = () => {
     const svg = document.getElementById('svg')
     const canvas = document.createElement('canvas')
-    const { width, height } = svg.getBBox()
+    let { width, height } = svg.getBBox()
     
     let clonedSvg = svg.cloneNode(true)
 
@@ -37,22 +37,21 @@ class MemeContainer extends React.Component {
       let context = canvas.getContext('2d')
       // draw image in canvas starting left-0 , top - 0  
       context.drawImage(image, 0, 0, width, height )
-      //  downloadImage(canvas); need to implement
+      
+      let png = canvas.toDataURL()
+
+      const download = function(href, name){
+        let link = document.createElement('a')
+        link.download = name
+        link.style.opacity = "0"
+        // document.append(link)
+        link.href = href
+        link.click()
+        link.remove()
+      }
+      download(png, "meme.png")
     }
     image.src = blobURL
-
-    let png = canvas.toDataURL('image/png')
-
-    const download = function(href, name){
-      let link = document.createElement('a')
-      link.download = name
-      link.style.opacity = "0"
-      // document.append(link)
-      link.href = href
-      link.click()
-      link.remove()
-    }
-    download(png, "meme.png")
   }
 
   handleUpload = (event, uploadForm) => {
